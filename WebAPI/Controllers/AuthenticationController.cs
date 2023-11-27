@@ -20,6 +20,7 @@ namespace WebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Route("Authentication")]
     public class AuthenticationController : ControllerBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -226,7 +227,7 @@ namespace WebAPI.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [Route("login")]
+        [Route("Login")]
         public async Task<IActionResult> Login([FromBody] Login loginModel)
         {
             try
